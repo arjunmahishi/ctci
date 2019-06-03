@@ -33,6 +33,13 @@ const build = () => {
 			console.log("INDEX.md successfully updated!");
 		}
 	});
+    fs.writeFile("./docs/README.md", indexString, (err) => {
+        if(err) {
+            console.log("couldn't write to INDEX.md. err:", err);
+        }else {
+            console.log("INDEX.md successfully updated!");
+        }
+    });
 };
 
 build();
